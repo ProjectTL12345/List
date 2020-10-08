@@ -2,9 +2,12 @@ package org.projecttl.program.list
 
 class Main {
     companion object {
+
+        var version = "1.0v"
+
         @JvmStatic
         fun main(args: Array<String>) {
-            println("List Program: 0.01b")
+            println("List Program: $version")
             println("Made by Project_TL")
             try {
                 Thread.sleep(1000)

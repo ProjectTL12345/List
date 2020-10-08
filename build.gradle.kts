@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "org.projecttl"
-version = "0.01b"
+version = "1.0v"
 
 repositories {
     mavenCentral()

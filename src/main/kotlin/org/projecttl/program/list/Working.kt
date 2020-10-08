@@ -86,7 +86,7 @@ class Working {
                 }
 
                 "version" -> {
-                    println("<List> 이 플러그인의 버전은 0.01b 입니다.")
+                    println("<List> 이 플러그인의 버전은 ${Main.version} 입니다.")
                 }
 
                 "exit" -> {
