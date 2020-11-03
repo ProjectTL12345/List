@@ -3,8 +3,8 @@ plugins {
     id("com.github.johnrengelman.shadow") version "6.0.0"
 }
 
-group = "org.projecttl"
-version = "1.0v"
+group = properties["programGroup"]!!
+version = properties["programVersion"]!!
 
 repositories {
     mavenCentral()
