@@ -12,7 +12,7 @@
 "load"는 파일을 불러오는 명령어입니다. 이 명령어를 사용하고나서 문자가 포함되어있는 파일을 불러올 수 있습니다. Ex) C:\Filename.txt
 
 # save
-"save"는 파일을 저장하는 명령어입니다. 저장 방식은 pel이라는 확장자로 저장이 됩니다. Ex) Test.pel
+"save"는 파일을 저장하는 명령어입니다. 저장 방식은 txt로 저장이 됩니다. Ex) Test.txt
 
 # version
 "version"은 버전 확인용 명령어 입니다.
