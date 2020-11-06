@@ -11,7 +11,7 @@ class Main {
         var running = true
         var array = ArrayList<String>()
         var extension = ".txt"
-        var version = "1.0v"
+        var version = "2.1v"
 
         @JvmStatic
         fun main(args: Array<out String>) {
@@ -53,7 +53,8 @@ class Main {
                     }
 
                     "check" -> {
-                        println("<List> 지금까지 입력된 단어들: $array")
+                        val check = Check()
+                        check.onCheck()
                     }
 
                     "load" -> {
