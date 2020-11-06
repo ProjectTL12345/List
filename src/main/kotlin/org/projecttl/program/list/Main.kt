@@ -1,10 +1,6 @@
 package org.projecttl.program.list
 
 import org.projecttl.program.list.util.*
-import java.io.FileReader
-import java.nio.file.Files
-import java.nio.file.Paths
-import java.nio.file.StandardOpenOption
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -23,6 +19,7 @@ class Main {
             println("Made by Project_TL")
             try {
                 Thread.sleep(1000)
+
             } catch (exception: Exception) {
                 exception.printStackTrace()
             }

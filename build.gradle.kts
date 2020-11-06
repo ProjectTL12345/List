@@ -38,6 +38,7 @@ tasks {
         manifest {
             attributes["Main-Class"] = "org.projecttl.program.list.Main"
         }
+
         from (
             shade.map {
                 if (it.isDirectory)
