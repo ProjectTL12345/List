@@ -4,14 +4,14 @@ import org.projecttl.program.list.util.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Main {
+class ListProgram {
 
     companion object {
 
-        var running = true
+        private var running = true
         var array = ArrayList<String>()
         var extension = ".txt"
-        var version = "2.1v"
+        private var version = "2.1v"
 
         @JvmStatic
         fun main(args: Array<out String>) {

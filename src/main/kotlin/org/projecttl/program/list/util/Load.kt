@@ -1,6 +1,6 @@
 package org.projecttl.program.list.util
 
-import org.projecttl.program.list.Main
+import org.projecttl.program.list.ListProgram
 import java.io.FileReader
 import java.util.*
 
@@ -13,7 +13,7 @@ class Load {
 
         try {
             val read = FileReader(loadPath)
-            Main.array.add(read.readText())
+            ListProgram.array.add(read.readText())
             println("<List> 파일을 불러왔습니다.")
         } catch (exception: Exception) {
             exception.printStackTrace()

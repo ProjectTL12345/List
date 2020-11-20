@@ -36,7 +36,7 @@ tasks {
 
     jar {
         manifest {
-            attributes["Main-Class"] = "org.projecttl.program.list.Main"
+            attributes["Main-Class"] = "org.projecttl.program.list.ListProgram"
         }
 
         from (

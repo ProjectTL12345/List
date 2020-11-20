@@ -1,6 +1,6 @@
 package org.projecttl.program.list.util
 
-import org.projecttl.program.list.Main
+import org.projecttl.program.list.ListProgram
 import java.util.*
 
 class Create {
@@ -10,7 +10,7 @@ class Create {
         val scanner = Scanner(System.`in`)
         val scannedTitle = scanner.nextLine()
 
-        Main.array.add(scannedTitle)
-        println("<List> 입력된 단어들: ${Main.array}")
+        ListProgram.array.add(scannedTitle)
+        println("<List> 입력된 단어들: ${ListProgram.array}")
     }
 }
