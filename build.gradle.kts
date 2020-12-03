@@ -1,6 +1,7 @@
 plugins {
     kotlin ("jvm") version "1.4.10"
     id("com.github.johnrengelman.shadow") version "6.1.0"
+    `maven-publish`
 }
 
 group = properties["programGroup"]!!
@@ -13,9 +14,6 @@ repositories {
 dependencies {
     implementation (kotlin("stdlib-jdk8"))
 }
-
-val shade = configurations.create("shade")
-shade.extendsFrom(configurations.implementation.get())
 
 tasks {
     compileJava {
@@ -38,15 +36,23 @@ tasks {
         manifest {
             attributes["Main-Class"] = "org.projecttl.program.list.ListProgram"
         }
+    }
 
-        from (
-            shade.map {
-                if (it.isDirectory)
-                    it
+    create<Jar>("sourceJar") {
+        archiveClassifier.set("source")
+        from(sourceSets["main"].allSource)
+    }
 
-                else
-                    zipTree(it)
-            }
-        )
+    shadowJar {
+        from("sourceJar")
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("List") {
+            artifact(tasks["sourceJar"])
+            from(components["java"])
+        }
     }
 }
