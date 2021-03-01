@@ -1,5 +1,6 @@
 # List
-이 프로그램은 배열을 활용한 프로그램입니다.
+이 프로그램은 배열을 활용한,
+1학년 2학기 수학 수행평가때 이용했던 프로그램입니다.
 명령어는 총 7개가 존재합니다. (create, remove, load, save, check, version, exit)
 
 ## Command Features
