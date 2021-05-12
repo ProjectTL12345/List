@@ -1,6 +1,6 @@
 plugins {
-    kotlin ("jvm") version "1.4.10"
-    id("com.github.johnrengelman.shadow") version "6.1.0"
+    kotlin ("jvm") version "1.5.0"
+    id("com.github.johnrengelman.shadow") version "7.0.0"
     `maven-publish`
 }
 
@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation (kotlin("stdlib-jdk8"))
+    implementation (kotlin("stdlib"))
 }
 
 tasks {
@@ -25,11 +25,11 @@ tasks {
     }
 
     compileKotlin {
-        kotlinOptions.jvmTarget = "1.8"
+        kotlinOptions.jvmTarget = "11"
     }
 
     compileTestKotlin {
-        kotlinOptions.jvmTarget = "1.8"
+        kotlinOptions.jvmTarget = "11"
     }
 
     jar {
@@ -44,7 +44,9 @@ tasks {
     }
 
     shadowJar {
-        from("sourceJar")
+        archiveBaseName.set(project.name)
+        archiveVersion.set("")
+        archiveClassifier.set("")
     }
 }
 
